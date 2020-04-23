@@ -23,6 +23,8 @@ public class ApparatPage extends ParentPage {
     @FindBy(name = "add")
     private WebElement createButton;
 
+    @FindBy(xpath = ".//table[@id='device_list']")
+    private WebElement table;
 
 
     public void clickAddButton(){actionsWithOurElements.clickButton(addButton);}
@@ -43,6 +45,10 @@ public class ApparatPage extends ParentPage {
     public boolean isInputApparatNumberDisplayed() {
         return actionsWithOurElements.isElementDisplayed(inputApparatNumber);
     }
+
+    public boolean isTableDisplayed() {
+        return actionsWithOurElements.isElementWithoutClickDisplayed(table);
+}
 
 
 }

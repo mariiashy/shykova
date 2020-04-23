@@ -26,7 +26,7 @@ public class CreateApparatWithNumberCommentFilled extends AbstractParentTest {
         apparatPage.inputApparatComment(getCfgValue("APPARAT_COMMENT"));
         apparatPage.clickCreateButton();
 
-        checkExpectedResult("Add button is not displayed", !apparatPage.isInputApparatNumberDisplayed());
+        checkExpectedResult("Table is not displayed", apparatPage.isTableDisplayed());
 
 
     }

@@ -42,6 +42,17 @@ public class ActionWithWebElements {
         }
     }
 
+    public boolean isElementWithoutClickDisplayed(WebElement element) {
+        try {
+            webDriverWait_15.until(ExpectedConditions.visibilityOf(element));
+
+            return element.isDisplayed();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            logger.error("");
+            return false;
+        }
+    }
 
     public boolean isElementDisplayed(WebElement element) {
         try {
@@ -50,7 +61,7 @@ public class ActionWithWebElements {
 
             return element.isDisplayed();
         } catch (Exception ex) {
-            ex.printStackTrace();
+       ex.printStackTrace();
             logger.error("");
             return false;
         }

@@ -2,6 +2,7 @@ package editProfileTest;
 
 import libs.ConfigClass;
 import libs.SpreadsheetData;
+import org.apache.log4j.BasicConfigurator;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
